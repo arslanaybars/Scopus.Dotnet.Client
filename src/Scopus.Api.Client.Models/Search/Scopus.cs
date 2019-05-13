@@ -36,13 +36,13 @@ namespace Scopus.Api.Client.Models.Search
         public string PrismIssn { get; set; }
 
         [JsonProperty("prism:volume")]
-        public long PrismVolume { get; set; }
+        public string PrismVolume { get; set; }
 
         [JsonProperty("prism:issueIdentifier")]
-        public long PrismIssueIdentifier { get; set; }
+        public string PrismIssueIdentifier { get; set; }
 
         [JsonProperty("prism:pageRange")]
-        public object PrismPageRange { get; set; }
+        public string PrismPageRange { get; set; }
 
         [JsonProperty("prism:coverDate")]
         public DateTimeOffset PrismCoverDate { get; set; }
@@ -54,7 +54,7 @@ namespace Scopus.Api.Client.Models.Search
         public string PrismDoi { get; set; }
 
         [JsonProperty("citedby-count")]
-        public long CitedbyCount { get; set; }
+        public int CitedbyCount { get; set; }
 
         [JsonProperty("affiliation")]
         public List<Affiliation> Affiliation { get; set; }
@@ -72,7 +72,7 @@ namespace Scopus.Api.Client.Models.Search
         public long SourceId { get; set; }
 
         [JsonProperty("openaccess")]
-        public long Openaccess { get; set; }
+        public int Openaccess { get; set; }
 
         [JsonProperty("openaccessFlag")]
         public bool OpenaccessFlag { get; set; }

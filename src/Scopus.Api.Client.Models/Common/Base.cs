@@ -5,7 +5,13 @@ using System.Text;
 
 namespace Scopus.Api.Client.Models.Common
 {
-    public partial class SearchResults<T>
+    public class SearchResults<T>
+    {
+        [JsonProperty("search-results")]
+        public Data<T> Data { get; set; }
+    }
+
+    public class Data<T>
     {
         [JsonProperty("opensearch:totalResults")]
         public long OpensearchTotalResults { get; set; }
@@ -26,7 +32,7 @@ namespace Scopus.Api.Client.Models.Common
         public List<T> Entry { get; set; }
     }
 
-    public partial class OpensearchQuery
+    public class OpensearchQuery
     {
         [JsonProperty("@role")]
         public string Role { get; set; }

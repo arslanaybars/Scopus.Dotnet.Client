@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scopus.Api.Client", "src\Scopus.Api.Client\Scopus.Api.Client.csproj", "{3432BCB9-6846-4170-98C7-064D5E2AFEA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scopus.Api.Client", "src\Scopus.Api.Client\Scopus.Api.Client.csproj", "{3432BCB9-6846-4170-98C7-064D5E2AFEA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scopus.Api.Client.Models", "src\Scopus.Api.Client.Models\Scopus.Api.Client.Models.csproj", "{0B4C3F8F-B6C6-4920-8FC1-33068C335D78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scopus.Api.Client.Models", "src\Scopus.Api.Client.Models\Scopus.Api.Client.Models.csproj", "{0B4C3F8F-B6C6-4920-8FC1-33068C335D78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scopus.Api.Client.Test", "tests\Scopus.Api.Client.Test\Scopus.Api.Client.Test.csproj", "{3808609F-2BE9-45B4-AFC9-308E5F873380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0B4C3F8F-B6C6-4920-8FC1-33068C335D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B4C3F8F-B6C6-4920-8FC1-33068C335D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B4C3F8F-B6C6-4920-8FC1-33068C335D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3808609F-2BE9-45B4-AFC9-308E5F873380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3808609F-2BE9-45B4-AFC9-308E5F873380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3808609F-2BE9-45B4-AFC9-308E5F873380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3808609F-2BE9-45B4-AFC9-308E5F873380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
