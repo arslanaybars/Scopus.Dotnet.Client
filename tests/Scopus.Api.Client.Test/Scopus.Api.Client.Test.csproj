@@ -2,8 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-
     <IsPackable>false</IsPackable>
+
+    <PackageId>Scopus.Api.Client.Test</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Aybars Arslan</Authors>
+    <Company>AybarSoft</Company>
+    <Description>C#.NET client for Scopus API</Description>
+    <PackageTags>Scopus, Client, Api client, .net client, scopus .net client, scopus c# client</PackageTags>
+    <PackageProjectUrl>https://github.com/arslanaybars/Scopus.Dotnet.Client</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/arslanaybars/Scopus.Dotnet.Client</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
