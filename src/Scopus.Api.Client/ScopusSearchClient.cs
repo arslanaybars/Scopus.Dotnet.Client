@@ -1,8 +1,5 @@
 ﻿using Scopus.Api.Client.Abstract;
 using Scopus.Api.Client.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Scopus.Api.Client
@@ -15,19 +12,27 @@ namespace Scopus.Api.Client
         {
         }
 
+        /// <summary>
+        /// Scopus search
+        /// </summary>
+        /// <param name="query">Pass scopus search query by using scopus query syntax
+        ///     See: https://dev.elsevier.com/tips/ScopusSearchTips.htm
+        /// </param>
+        /// <returns></returns>
         public SearchResults<Models.Search.Scopus> Retrieve(string query)
         {
-#if DEBUG
-            query = "query=AFFILCITY(KARABUK)";
-#endif
             return Get<SearchResults<Models.Search.Scopus>>(endpoint, query);
         }
 
+        /// <summary>
+        /// Scopus search async
+        /// </summary>
+        /// <param name="query">Pass scopus search query by using scopus query syntax
+        ///     See: https://dev.elsevier.com/tips/ScopusSearchTips.htm
+        /// </param>
+        /// <returns></returns>
         public async Task<SearchResults<Models.Search.Scopus>> RetrieveAsync(string query)
         {
-#if DEBUG
-            query = "query=AFFILCITY(KARABUK)";
-#endif
             return await GetAsync<SearchResults<Models.Search.Scopus>>(endpoint, query);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Scopus.Api.Client.Interfaces;
+using Scopus.Api.Client.Models.Common;
 using Scopus.Api.Client.Utils;
 using System;
 using System.Net.Http;
@@ -37,16 +38,34 @@ namespace Scopus.Api.Client.Abstract
             };
         }
 
-        public T Get<T>(string endpoint, string parameters = null)
+
+        /// <summary>
+        /// Http Get implementation
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="endpoint"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public T Get<T>(string endpoint, string parameters = null) where T : HttpStatusResource
         {
             return GetAsync<T>(Utilities.GenerateRequestUri(_apiUrl, endpoint, _apiKey, parameters)).GetAwaiter().GetResult();
         }
 
-        public async Task<T> GetAsync<T>(string endpoint, string parameters = null)
+        /// <summary>
+        /// Http GetAsync implementation
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="endpoint"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public async Task<T> GetAsync<T>(string endpoint, string parameters = null) where T : HttpStatusResource
         {
             HttpResponseMessage httpResponseMessage = await _httpClient.GetAsync(Utilities.GenerateRequestUri(_apiUrl, endpoint, _apiKey, parameters));
             string strContent = await httpResponseMessage.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<T>(strContent);
+            var result = JsonConvert.DeserializeObject<T>(strContent);
+            result.IsSuccessStatusCode = httpResponseMessage.IsSuccessStatusCode;
+            result.StatusCode = httpResponseMessage.StatusCode;
+            return result;
         }
     }
 }

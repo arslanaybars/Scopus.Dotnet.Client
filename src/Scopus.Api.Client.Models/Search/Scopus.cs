@@ -2,7 +2,6 @@
 using Scopus.Api.Client.Models.Common;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Scopus.Api.Client.Models.Search
 {

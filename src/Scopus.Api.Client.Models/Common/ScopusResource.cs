@@ -1,11 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Scopus.Api.Client.Models.Common
 {
-    public class SearchResults<T>
+    public class SearchResults<T> : HttpStatusResource
     {
         [JsonProperty("search-results")]
         public Data<T> Data { get; set; }
