@@ -9,6 +9,5 @@
 
              return apiUrl + endpoint + $"?apiKey={apiKey}" +(string.IsNullOrWhiteSpace(parameters) ? "" : $"&{parameters}");
         }
-
     }
 }
